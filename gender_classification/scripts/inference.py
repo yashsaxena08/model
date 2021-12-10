@@ -1,12 +1,18 @@
 import pickle
 from data_cleaning import clean_data
 from embedding import pre_embed
+import numpy as np
+import pandas as pd
+from tensorflow.keras.preprocessing import sequence
+from keras.models import load_model
+import json
 
-char_index = pre_embed()[0]
+with open('char_index.json','r') as file:
+  char_index=json.load(out_file)
 
 
 
-def predict(names, model_path = 'gender_classification/pickle_model/model (2).pkl'):
+def predict(names, model_path='my_model.h5'):
   '''
     Input --> names: takes a list of names all should be in lower case
     
