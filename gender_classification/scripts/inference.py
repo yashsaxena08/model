@@ -6,7 +6,7 @@ char_index = pre_embed()[0]
 
 
 
-def predict(names, model_path = 'gender_classification/pickle_model/model.pkl'):
+def predict(names, model_path = 'gender_classification/pickle_model/model (2).pkl'):
   '''
     Input --> names: takes a list of names all should be in lower case
     
