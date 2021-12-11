@@ -1,4 +1,4 @@
-import pandas pd
+import pandas as pd
 import regex
 
 def clean_data(names):
