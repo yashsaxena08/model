@@ -30,7 +30,7 @@ def predict(names, model_path='my_model.h5'):
       res.append(char_index[j])
     embeddings.append(res)
 
-  padded_embedding = sequence.pad_sequences(embeddings, maxlen=40, value=98, padding = 'post')  # padded embeddings
+  padded_embedding = sequence.pad_sequences(embeddings, maxlen=40, value=len(char_index), padding = 'post')  # padded embeddings
   pred=model.predict(np.asarray(padded_embedding))
   results = pd.DataFrame()
   results['name'] = names
